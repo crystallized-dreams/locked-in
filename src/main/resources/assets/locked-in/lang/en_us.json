@@ -6,9 +6,9 @@
   "advancements.locked-in.use_key.title": "Under a lock",
   "advancements.locked-in.use_key.desc": "Lock or unlock container using a key.",
 
-  "enchantment.locked-in.lock_unbreachable": "Unbreachable lock",
+  "enchantment.locked-in.lock_unbreachable": "Unbreachable Lock",
   "enchantment.locked-in.lock_unbreachable.desc": "Container that was closed with this enchantment won't be unlockable with lockpick.",
-  "enchantment.locked-in.lock_unbreakable": "Unbreakable lock",
+  "enchantment.locked-in.lock_unbreakable": "Unbreakable Lock",
   "enchantment.locked-in.lock_unbreakable.desc": "Container that was closed with this enchantment won't be breakable.",
 
   "text.locked-in.hint": "Hold %s to learn more",

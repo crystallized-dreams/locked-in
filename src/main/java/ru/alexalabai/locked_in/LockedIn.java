@@ -3,13 +3,15 @@ package ru.alexalabai.locked_in;
 import com.mojang.serialization.Codec;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.block.Block;
 import net.minecraft.component.ComponentType;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.enchantment.EnchantmentLevelEntry;
+import net.minecraft.item.*;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeSerializer;
@@ -24,8 +26,13 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
+import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradedItem;
+import net.minecraft.village.VillagerProfession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Optional;
 
 public class LockedIn implements ModInitializer {
 	public static final String MOD_ID = "locked-in";
@@ -73,6 +80,34 @@ public class LockedIn implements ModInitializer {
 			}
 			return true;
 		}));
+		ServerLifecycleEvents.SERVER_STARTED.register(server->{
+			ItemStack enchantedBook=EnchantedBookItem.forEnchantment(
+					new EnchantmentLevelEntry(Utils.getEntry(server.getOverworld(),LOCK_UNBREACHABLE), 1)
+			);
+			TradeOfferHelper.registerVillagerOffers(VillagerProfession.LIBRARIAN, 3, factories -> {
+				factories.add((entity, random) -> new TradeOffer(
+						new TradedItem(Items.BOOK, 1), //In
+						Optional.of(new TradedItem(Items.EMERALD, 16)), //In
+						enchantedBook, //Out
+						8, //Max uses
+						12, //Experience
+						0.1f //Price multiplier
+				));
+			});
+			ItemStack enchantedBook1=EnchantedBookItem.forEnchantment(
+					new EnchantmentLevelEntry(Utils.getEntry(server.getOverworld(),LOCK_UNBREAKABLE), 1)
+			);
+			TradeOfferHelper.registerVillagerOffers(VillagerProfession.LIBRARIAN, 3, factories -> {
+				factories.add((entity, random) -> new TradeOffer(
+						new TradedItem(Items.BOOK, 1), //In
+						Optional.of(new TradedItem(Items.EMERALD, 16)), //In
+						enchantedBook1, //Out
+						8, //Max uses
+						12, //Experience
+						0.1f //Price multiplier
+				));
+			});
+		});
 		LOGGER.info("[LOCKEDIN]: Initialized common sources.");
 	}
 

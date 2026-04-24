@@ -1,9 +1,16 @@
 # Locked In
-
-## Setup
-
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Overhaul of vanilla's hidden lock feature.
+## Items
+- **Key**  
+    Allows to lock/unlock containers.
+- **Master Key**  
+    Allows to open any lockable container even if there is lock on it.
+- **Lockpick**  
+    Allows to unlock any container if it isn't unbreachable.
+## Enchantments
+- **Unbreakable lock**  
+    Container that was locked by key with this enchantment can't be broken unless unlocked again.
+- **Unbreachable lock**  
+    Container that was locked by key with this enchantment can't be opened with lockpick.
+## In action
+![Container being locked and unlocked by key](res/main.gif)

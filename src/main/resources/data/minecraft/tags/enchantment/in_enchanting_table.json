@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "locked-in:lock_unbreachable",
+    "locked-in:lock_unbreakable"
+  ]
+}

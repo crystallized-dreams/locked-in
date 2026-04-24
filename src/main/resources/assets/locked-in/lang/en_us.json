@@ -1,0 +1,26 @@
+{
+  "item.locked-in.key": "Key",
+  "item.locked-in.master_key": "Master Key",
+  "item.locked-in.lockpick": "Lockpick",
+
+  "advancements.locked-in.use_key.title": "Under a lock",
+  "advancements.locked-in.use_key.desc": "Lock or unlock container using a key.",
+
+  "enchantment.locked-in.lock_unbreachable": "Unbreachable lock",
+  "enchantment.locked-in.lock_unbreachable.desc": "Container that was closed with this enchantment won't be unlockable with lockpick.",
+  "enchantment.locked-in.lock_unbreakable": "Unbreakable lock",
+  "enchantment.locked-in.lock_unbreakable.desc": "Container that was closed with this enchantment won't be breakable.",
+
+  "text.locked-in.hint": "Hold %s to learn more",
+  "text.locked-in.hide_hint": "Release %s to hide",
+  "text.locked-in.key.invalid": "Key doesn't fit",
+  "text.locked-in.key.locked": "Locked %s",
+  "text.locked-in.key.unlocked": "Unlocked %s",
+  "text.locked-in.key.unbreachable": "Seems like the lock doesn't budge",
+  "text.locked-in.key.unbreakable": "Container is too strong",
+  "text.locked-in.key.copy": "Duplicate",
+  "text.locked-in.key.tooltip_0": "Shift+RMB to lock and unlock container",
+  "text.locked-in.key.tooltip_1": "Container can only be opened by the key with the same id",
+  "text.locked-in.key.tooltip_2": "RMB to open any container",
+  "text.locked-in.key.tooltip_3": "RMB to try to unlock any container"
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "locked-in:item/master_key"
+  },
+  "display": {
+    "gui": {
+      "translation": [2, 0, 0]
+    }
+  }
+}

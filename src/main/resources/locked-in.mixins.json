@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "ru.alexalabai.locked_in.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ContainerLockMixin",
+    "LockableContainerBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+	}
+}

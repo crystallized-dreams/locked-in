@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "locked-in",
+	"version": "${version}",
+	"name": "Locked In",
+	"description": "Overhaul of vanilla's hidden lock feature.\nCraft keys and lock containers with them! Supports vanilla containers and some modded too.",
+	"authors": [
+		"Alex Alabai"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/locked-in",
+		"sources": "https://github.com/crystallized-dreams/locked-in"
+	},
+	"license": "MIT",
+	"icon": "assets/locked-in/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["ru.alexalabai.locked_in.LockedIn"],
+		"client": ["ru.alexalabai.locked_in.LockedInClient"],
+		"cardinal-components": ["ru.alexalabai.locked_in.cca.ModCCA"],
+		"emi": ["ru.alexalabai.locked_in.emi.EmiIntegration"]
+	},
+	"mixins": [
+		"locked-in.mixins.json"
+	],
+	"custom": {
+		"cardinal-components": [
+			"locked-in:key_storage"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": ">=1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

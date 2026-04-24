@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "locked-in:item/key"
+  },
+  "overrides": [
+    {
+      "predicate": { "locked-in:copied": 1 },
+      "model": "locked-in:item/key_copy"
+    }
+  ],
+  "display": {
+    "gui": {
+      "translation": [2, 0, 0]
+    }
+  }
+}

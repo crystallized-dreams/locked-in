@@ -1,0 +1,11 @@
+{
+  "item.key.lock": {
+    "sounds": [
+      "locked-in:item/lock_1",
+      "locked-in:item/lock_2",
+      "locked-in:item/lock_3",
+      "locked-in:item/lock_4",
+      "locked-in:item/lock_5"
+    ]
+  }
+}

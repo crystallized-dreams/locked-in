@@ -1,0 +1,26 @@
+{
+  "item.locked-in.key": "Ключ",
+  "item.locked-in.master_key": "Мастер-ключ",
+  "item.locked-in.lockpick": "Отмычка",
+
+  "advancements.locked-in.use_key.title": "Под замком",
+  "advancements.locked-in.use_key.desc": "Заблокируйте или разблокируйте контейнер ключом.",
+  
+  "enchantment.locked-in.lock_unbreachable": "Невзламываемый замок",
+  "enchantment.locked-in.lock_unbreachable.desc": "Контейнер, заблокированный ключом с этим зачарованием, будет невозможно разблокировать отмычкой.",
+  "enchantment.locked-in.lock_unbreakable": "Неломаемый замок",
+  "enchantment.locked-in.lock_unbreakable.desc": "Контейнер, заблокированный ключом с этим зачарованием, будет невозможно сломать.",
+
+  "text.locked-in.hint": "Удерживайте %s, чтобы узнать больше",
+  "text.locked-in.hide_hint": "Отпустите %s, чтобы скрыть",
+  "text.locked-in.key.invalid": "Ключ не подходит",
+  "text.locked-in.key.locked": "%s заблокирован",
+  "text.locked-in.key.unlocked": "%s разблокирован",
+  "text.locked-in.key.unbreachable": "Похоже, замок не поддаётся",
+  "text.locked-in.key.unbreakable": "Контейнер слишком прочный",
+  "text.locked-in.key.copy": "Дубликат",
+  "text.locked-in.key.tooltip_0": "Shift+RMB для блокировки и разблокировки контейнера",
+  "text.locked-in.key.tooltip_1": "Контейнер может быть открыт только ключом с тем же идентификатором",
+  "text.locked-in.key.tooltip_2": "RMB для открытия любого контейнера",
+  "text.locked-in.key.tooltip_3": "RMB для попытки разблокировки контейнера"
+}

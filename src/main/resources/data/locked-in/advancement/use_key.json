@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "use_key": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "locked-in:key"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.locked-in.use_key.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "locked-in:key"
+    },
+    "title": {
+      "translate": "advancements.locked-in.use_key.title"
+    }
+  },
+  "requirements": [
+    [
+      "use_key"
+    ]
+  ]
+}

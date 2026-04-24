@@ -1,0 +1,31 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "locked-in:item/picklock"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0, 180, 0],
+      "translation": [-1, 1, -0.25],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "thirdperson_lefthand": {
+      "translation": [-1.25, 1, -0.25],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "firstperson_righthand": {
+      "rotation": [-170.26, 44.23, 172.7],
+      "translation": [2.5, 2.25, 0],
+      "scale": [0.75, 0.75, 0.75]
+    },
+    "firstperson_lefthand": {
+      "rotation": [-7.3, -16.92, -2.48],
+      "translation": [2.5, 2.25, 0],
+      "scale": [0.75, 0.75, 0.75]
+    },
+    "ground": {
+      "translation": [0, 1.25, 0],
+      "scale": [0.5, 0.5, 0.5]
+    }
+  }
+}

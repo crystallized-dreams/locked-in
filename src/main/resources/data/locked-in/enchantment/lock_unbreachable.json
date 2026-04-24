@@ -1,0 +1,22 @@
+{
+  "anvil_cost": 10,
+  "description": {
+    "translate": "enchantment.locked-in.lock_unbreachable"
+  },
+  "effects": {},
+  "max_cost": {
+    "base": 90,
+    "per_level_above_first": 9
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 30,
+    "per_level_above_first": 9
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "exclusive_set": "#locked-in:exclusive_set/key_unbreachable",
+  "supported_items": "locked-in:key",
+  "weight": 2
+}

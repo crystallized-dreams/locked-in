@@ -12,5 +12,10 @@ Overhaul of vanilla's hidden lock feature.
     Container that was locked by key with this enchantment can't be broken unless unlocked again.
 - **Unbreachable lock**  
     Container that was locked by key with this enchantment can't be opened with lockpick.
+## Recipes
+- **Key Duplication**  
+    Place key that needs to be duplicated, one empty key and a name tag.
+- **Key "Cleaning"**  
+    To remove key id and duplication status press key against a grindstone.
 ## In action
 ![Container being locked and unlocked by key](res/main.gif)

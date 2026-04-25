@@ -22,5 +22,9 @@
   "text.locked-in.key.tooltip_0": "Shift+RMB для блокировки и разблокировки контейнера",
   "text.locked-in.key.tooltip_1": "Контейнер может быть открыт только ключом с тем же идентификатором",
   "text.locked-in.key.tooltip_2": "RMB для открытия любого контейнера",
-  "text.locked-in.key.tooltip_3": "RMB для попытки разблокировки контейнера"
+  "text.locked-in.key.tooltip_3": "RMB для попытки разблокировки контейнера",
+
+  "tag.locked-in.enchantable.key": "Ключи",
+
+  "emi.category.locked-in.grindstone_polish_ctg": "Ручная полировка"
 }

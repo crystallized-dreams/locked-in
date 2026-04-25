@@ -10,13 +10,15 @@
   },
   "max_level": 1,
   "min_cost": {
-    "base": 20,
+    "base": 15,
     "per_level_above_first": 9
   },
   "slots": [
-    "mainhand"
+    "mainhand",
+    "offhand"
   ],
   "exclusive_set": "#locked-in:exclusive_set/key_unbreachable",
-  "supported_items": "locked-in:key",
-  "weight": 2
+  "supported_items": "#locked-in:enchantable/key",
+  "primary_items": "#locked-in:enchantable/key",
+  "weight": 5
 }

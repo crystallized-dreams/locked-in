@@ -22,5 +22,9 @@
   "text.locked-in.key.tooltip_0": "Shift+RMB to lock and unlock container",
   "text.locked-in.key.tooltip_1": "Container can only be opened by the key with the same id",
   "text.locked-in.key.tooltip_2": "RMB to open any container",
-  "text.locked-in.key.tooltip_3": "RMB to try to unlock any container"
+  "text.locked-in.key.tooltip_3": "RMB to try to unlock any container",
+
+  "tag.locked-in.enchantable.key": "Keys",
+
+  "emi.category.locked-in.grindstone_polish_ctg": "Manual Polish"
 }

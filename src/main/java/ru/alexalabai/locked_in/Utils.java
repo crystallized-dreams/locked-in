@@ -2,10 +2,12 @@ package ru.alexalabai.locked_in;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -19,5 +21,9 @@ public class Utils {
     }
     public static boolean hasEnchantmentLevel(ItemStack stack, World world, RegistryKey<Enchantment> enchantment) {
         return getEnchantmentLevel(stack, world, enchantment)>=1;
+    }
+    public static void tryToInsertStack(PlayerEntity player, ItemStack stack) {
+        player.getInventory().insertStack(stack);
+        if(!stack.isEmpty()) ItemScatterer.spawn(player.getWorld(),player.getPos().x,player.getPos().y,player.getPos().z,stack);
     }
 }

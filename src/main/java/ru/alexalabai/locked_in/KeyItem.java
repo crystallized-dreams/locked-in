@@ -27,6 +27,16 @@ public class KeyItem extends ItemWithHint {
     }
 
     @Override
+    public int getEnchantability() {
+        return 10;
+    }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
+
+    @Override
     public ActionResult useOnBlock(ItemUsageContext ctx) {
         BlockPos pos=ctx.getBlockPos();
         BlockState state=ctx.getWorld().getBlockState(pos);

@@ -9,6 +9,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.block.Block;
 import net.minecraft.component.ComponentType;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.item.*;
@@ -42,7 +44,7 @@ public class LockedIn implements ModInitializer {
 	public static final ComponentType<Boolean> COPIED=ComponentType.<Boolean>builder().codec(Codec.BOOL).build();
 
 	public static Item KEY=regItem("key",
-			new KeyItem(new Item.Settings().maxCount(1)));
+			new KeyItem(new Item.Settings().maxCount(1).component(DataComponentTypes.ENCHANTMENTS, ItemEnchantmentsComponent.DEFAULT)));
 	public static Item MASTER_KEY=regItem("master_key",
 			new KeyItem(new Item.Settings().maxCount(1).component(KEY_ID,"master")));
 	public static Item LOCKPICK =regItem("lockpick",
@@ -53,6 +55,8 @@ public class LockedIn implements ModInitializer {
 
 	public static final TagKey<Block> LOCKABLE_CONTAINERS=
 			TagKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, "lockable_containers"));
+	public static final TagKey<Item> KEYS=
+			TagKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, "enchantable/key"));
 
 	static final Identifier ITEM_KEY_LOCK_SOUND_ID=Identifier.of(MOD_ID, "item.key.lock");
 	public static SoundEvent ITEM_KEY_LOCK_SOUND=SoundEvent.of(ITEM_KEY_LOCK_SOUND_ID);

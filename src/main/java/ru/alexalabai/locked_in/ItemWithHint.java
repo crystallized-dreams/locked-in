@@ -1,3 +1,5 @@
+//Taken from: https://github.com/crystallized-dreams/interdimensionallib/blob/master/src/main/java/ru/alexalabai/interdimensionallib/item/ItemWithHint.java
+
 package ru.alexalabai.locked_in;
 
 import net.fabricmc.api.EnvType;
@@ -21,12 +23,12 @@ public class ItemWithHint extends Item {
     public void appendTooltip(ItemStack stack, TooltipContext ctx, List<Text> tooltip, TooltipType type) {
         beforeHint(stack,ctx,tooltip);
         if(Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("text.locked-in.hide_hint",
-                    /*ClientGameOptions.hintKey.getBoundKeyLocalizedText()*/"Shift").formatted(Formatting.YELLOW));
             showHint(stack,ctx,tooltip);
+            tooltip.add(Text.translatable("text.locked-in.hide_hint",
+                    "Shift").formatted(Formatting.YELLOW));
         } else
             tooltip.add(Text.translatable("text.locked-in.hint",
-                    /*ClientGameOptions.hintKey.getBoundKeyLocalizedText()*/"Shift").formatted(Formatting.YELLOW));
+                    "Shift").formatted(Formatting.YELLOW));
         super.appendTooltip(stack, ctx, tooltip, type);
     }
 

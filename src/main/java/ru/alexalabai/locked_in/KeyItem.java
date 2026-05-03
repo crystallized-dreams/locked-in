@@ -6,6 +6,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.sound.SoundCategory;
@@ -91,13 +92,15 @@ public class KeyItem extends ItemWithHint {
     }
 
     @Override
-    public void beforeHint(ItemStack stack, Item.TooltipContext ctx, List<Text> tooltip) {
+    public void appendTooltip(ItemStack stack, TooltipContext ctx, List<Text> tooltip, TooltipType type) {
+        super.appendTooltip(stack, ctx, tooltip, type);
         if(stack.contains(LockedIn.KEY_ID)) {
             var id=stack.getOrDefault(LockedIn.KEY_ID,"Invalid");
             if(!id.equals("master")&&!id.equals("lockpick")) tooltip.add(Text.literal(id).formatted(Formatting.GRAY));
             if(stack.getOrDefault(LockedIn.COPIED,false)) tooltip.add(Text.translatable("text.locked-in.key.copy").formatted(Formatting.GRAY));
         }
     }
+
     @Override
     public void showHint(ItemStack stack, Item.TooltipContext ctx, List<Text> tooltip) {
         var id=stack.getOrDefault(LockedIn.KEY_ID,"");

@@ -11,8 +11,8 @@
   "enchantment.locked-in.lock_unbreakable": "Неломаемый замок",
   "enchantment.locked-in.lock_unbreakable.desc": "Контейнер, заблокированный ключом с этим зачарованием, будет невозможно сломать.",
 
-  "text.locked-in.hint": "Удерживайте %s, чтобы узнать больше",
-  "text.locked-in.hide_hint": "Отпустите %s, чтобы скрыть",
+  "text.locked-in.hint": "\uD83D\uDEC8 Удерживайте %s, чтобы узнать больше",
+  "text.locked-in.hide_hint": "\uD83D\uDEC8 Отпустите %s, чтобы скрыть",
   "text.locked-in.key.invalid": "Ключ не подходит",
   "text.locked-in.key.locked": "%s заблокирован",
   "text.locked-in.key.unlocked": "%s разблокирован",

@@ -11,8 +11,6 @@
   "enchantment.locked-in.lock_unbreakable": "Unbreakable Lock",
   "enchantment.locked-in.lock_unbreakable.desc": "Container that was closed with this enchantment won't be breakable.",
 
-  "text.locked-in.hint": "\uD83D\uDEC8 Hold %s to learn more",
-  "text.locked-in.hide_hint": "\uD83D\uDEC8 Release %s to hide",
   "text.locked-in.key.invalid": "Key doesn't fit",
   "text.locked-in.key.locked": "Locked %s",
   "text.locked-in.key.unlocked": "Unlocked %s",

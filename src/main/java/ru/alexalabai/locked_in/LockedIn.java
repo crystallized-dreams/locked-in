@@ -33,6 +33,7 @@ import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.crystallized_dreams.interdimensionallib.common.ItemUtils;
 
 import java.util.Optional;
 
@@ -86,7 +87,7 @@ public class LockedIn implements ModInitializer {
 		}));
 		ServerLifecycleEvents.SERVER_STARTED.register(server->{
 			ItemStack enchantedBook=EnchantedBookItem.forEnchantment(
-					new EnchantmentLevelEntry(Utils.getEntry(server.getOverworld(),LOCK_UNBREACHABLE), 1)
+					new EnchantmentLevelEntry(ItemUtils.getEntry(server.getOverworld(),LOCK_UNBREACHABLE), 1)
 			);
 			TradeOfferHelper.registerVillagerOffers(VillagerProfession.LIBRARIAN, 3, factories -> {
 				factories.add((entity, random) -> new TradeOffer(
@@ -99,7 +100,7 @@ public class LockedIn implements ModInitializer {
 				));
 			});
 			ItemStack enchantedBook1=EnchantedBookItem.forEnchantment(
-					new EnchantmentLevelEntry(Utils.getEntry(server.getOverworld(),LOCK_UNBREAKABLE), 1)
+					new EnchantmentLevelEntry(ItemUtils.getEntry(server.getOverworld(),LOCK_UNBREAKABLE), 1)
 			);
 			TradeOfferHelper.registerVillagerOffers(VillagerProfession.LIBRARIAN, 3, factories -> {
 				factories.add((entity, random) -> new TradeOffer(

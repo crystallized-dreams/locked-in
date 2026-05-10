@@ -4,7 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ContainerLockMixin",
-    "GrindstoneBlockMixin",
+    "LI_GrindstoneBlockMixin",
     "LockableContainerBlockEntityMixin"
   ],
   "injectors": {

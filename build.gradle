@@ -16,32 +16,38 @@ repositories {
 	// Cloth Config
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
-	// EMI
-	maven {
-		name = "TerraformersMC"
-		url = "https://maven.terraformersmc.com/"
-	}
 	// Ladysnake
 	maven {
 		name = "Ladysnake Libs"
 		url = 'https://maven.ladysnake.org/releases'
 	}
+	// InterdimensionalLib.
+	maven {
+		name = 'Modrinth'
+		url = 'https://api.modrinth.com/maven'
+		content {
+			includeGroup 'maven.modrinth'
+		}
+	}
+	maven { url = "https://jitpack.io" }
 }
 
 dependencies {
-	//General.
+	// General.
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	//Fabric API.
+	// Fabric API.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-	//EMI.
+	// EMI.
 	modCompileOnly "dev.emi:emi-fabric:${project.emi_version}+${project.minecraft_version}:api"
 	modLocalRuntime "dev.emi:emi-fabric:${project.emi_version}+${project.minecraft_version}"
-	//CCA.
+	// CCA.
 	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-base:${project.cca_version}"
 	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-world:${project.cca_version}"
+	// InterdimensionalLib.
+	modImplementation "com.github.crystallized-dreams:interdimensionallib:1.1.2"
 }
 
 processResources {

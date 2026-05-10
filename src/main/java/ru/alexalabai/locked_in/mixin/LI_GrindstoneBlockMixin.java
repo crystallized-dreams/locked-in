@@ -17,27 +17,27 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
+import ru.crystallized_dreams.interdimensionallib.common.ItemUtils;
 import ru.alexalabai.locked_in.LockedIn;
-import ru.alexalabai.locked_in.Utils;
 
 @SuppressWarnings("unused")
 @Mixin(GrindstoneBlock.class)
-public abstract class GrindstoneBlockMixin extends Block {
+public abstract class LI_GrindstoneBlockMixin extends Block {
     @Shadow @Final private static Text TITLE;
 
-    public GrindstoneBlockMixin(Settings settings) {
+    public LI_GrindstoneBlockMixin(Settings settings) {
         super(settings);
     }
 
     @Unique
-    void processItem(World world, BlockPos pos, PlayerEntity player, ItemStack stack) {
+    void processItem$locked_in(World world, BlockPos pos, PlayerEntity player, ItemStack stack) {
         if(world.isClient) return;
         player.getItemCooldownManager().set(stack.getItem(),10);
         stack.decrementUnlessCreative(1,player);
         world.playSound(null,pos,SoundEvents.BLOCK_GRINDSTONE_USE,SoundCategory.BLOCKS);
     }
 
-    @Override
+    @Unique @Override
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if(player.getItemCooldownManager().isCoolingDown(stack.getItem())||
                 !stack.isIn(LockedIn.KEYS)||
@@ -45,9 +45,9 @@ public abstract class GrindstoneBlockMixin extends Block {
         if(!world.isClient()) {
             ItemStack cleanKey = stack.copy();
             cleanKey.remove(LockedIn.COPIED);
-            cleanKey.set(LockedIn.KEY_ID, "");
-            processItem(world, pos, player, stack);
-            Utils.tryToInsertStack(player, cleanKey);
+            cleanKey.remove(LockedIn.KEY_ID);
+            processItem$locked_in(world, pos, player, stack);
+            ItemUtils.tryToInsertStack(player, cleanKey);
         }
         return ItemActionResult.CONSUME;
     }

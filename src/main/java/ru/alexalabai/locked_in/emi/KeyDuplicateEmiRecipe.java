@@ -34,7 +34,7 @@ public class KeyDuplicateEmiRecipe implements EmiRecipe {
 
         this.nametag = EmiStack.of(Items.NAME_TAG);
 
-        ItemStack outputStack = new ItemStack(LockedIn.KEY, 1);
+            ItemStack outputStack = new ItemStack(LockedIn.KEY, 1);
         outputStack.set(LockedIn.KEY_ID, "your-key-id");
         outputStack.set(LockedIn.COPIED, true);
         this.output = EmiStack.of(outputStack);

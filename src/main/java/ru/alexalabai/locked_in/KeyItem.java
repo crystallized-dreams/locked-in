@@ -11,12 +11,13 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import ru.crystallized_dreams.interdimensionallib.common.ItemUtils;
+import ru.crystallized_dreams.interdimensionallib.item.ItemWithHint;
 import ru.alexalabai.locked_in.cca.IKeyStorageComponent;
 import ru.alexalabai.locked_in.cca.ModCCA;
 
@@ -48,8 +49,8 @@ public class KeyItem extends ItemWithHint {
                 String curId=ctx.getStack().getOrDefault(LockedIn.KEY_ID,"");
                 if(curId.equals("master")) return ActionResult.FAIL;
                 boolean isPicklock=curId.equals("lockpick");
-                boolean isUnbreachable=Utils.hasEnchantmentLevel(ctx.getStack(),world,LockedIn.LOCK_UNBREACHABLE);
-                boolean isUnbreakable=Utils.hasEnchantmentLevel(ctx.getStack(),world,LockedIn.LOCK_UNBREAKABLE);
+                boolean isUnbreachable= ItemUtils.hasEnchantmentLevel(ctx.getStack(),world,LockedIn.LOCK_UNBREACHABLE);
+                boolean isUnbreakable=ItemUtils.hasEnchantmentLevel(ctx.getStack(),world,LockedIn.LOCK_UNBREAKABLE);
                 BlockEntity blockEntity=world.getBlockEntity(pos);
                 if(blockEntity==null) return super.useOnBlock(ctx);
                 NbtCompound nbt=blockEntity.createNbt(world.getRegistryManager());
